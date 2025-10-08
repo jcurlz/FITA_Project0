@@ -17,8 +17,13 @@ ProjRootFolder
 |_README.md
 
 ## Virtual Env setup ##
-Create an interpreter or python -m venv .venv
+# Create an interpreter #
+```bash
+python -m venv .venv
+```
+```bash
 .venv\Scripts\activate
+```
 
 ## Requirement installation ##
 ```bash
