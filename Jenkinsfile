@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         PYTHON = "python"
-        REPORT_PATH = "behave_report.html"
+        REPORT_PATH = "reports/behave_report.html"
     }
 
     stages {
