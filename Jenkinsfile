@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }   
+            }
         }
         stage('Setup') {
             steps {
@@ -58,10 +58,7 @@ pipeline {
                 to: 'jcurlz55@gmail.com',
                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build succeeded! Check details at ${env.BUILD_URL}",
-                from: 'jcurlz55@gmail.com',
-                replyTo: 'jcurlz55@gmail.com',
-                attachLog: true,
-                smtpCredentialId: 'gtvf bwbr gljr hagt'  // replace with actual Jenkins credential ID
+                attachLog: true
             )
         }
         failure {
@@ -70,10 +67,7 @@ pipeline {
                 to: 'jcurlz55@gmail.com',
                 subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build failed! Check console output: ${env.BUILD_URL}",
-                from: 'jcurlz55@gmail.com',
-                replyTo: 'jcurlz55@gmail.com',
-                attachLog: true,
-                smtpCredentialId: 'gtvf bwbr gljr hagt'  // replace with actual Jenkins credential ID
+                attachLog: true
             )
         }
     }
