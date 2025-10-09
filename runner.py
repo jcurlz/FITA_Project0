@@ -7,13 +7,13 @@ if __name__ == "__main__":
     print(features_path)
 
     behave_args = [
-        features_path,
-        #  '-t', 'element',
-        #  '--format', 'behave_html_formatter:HTMLFormatter',
-        #  '--out', 'reports/behave_report.html',
-        #  '--no-skipped',
-        # '--no-capture',
-        # '-f', 'plain'
+        features_path
+        #,  '-t', 'element'
+        #,  '--format', 'behave_html_formatter:HTMLFormatter'
+        #,  '--out', 'reports/behave_report.html'
+        #,  '--no-skipped'
+        #, '--no-capture'
+        #, '-f', 'plain'
     ]
 
     # Execute Behave
@@ -23,4 +23,5 @@ if __name__ == "__main__":
     if exit_code != 0:
         print("Behave tests failed!")
     else:
+
         print("Behave tests passed successfully.")
