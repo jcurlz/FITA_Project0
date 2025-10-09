@@ -1,7 +1,6 @@
 # Automation Practise Website #
 https://practice.expandtesting.com/
 
-
 ## Behave Project Structure ##
 ProjRootFolder
 |_features
@@ -38,3 +37,4 @@ pip install -r requirements.txt
 python runner.py
 
 ```
+
