@@ -55,7 +55,7 @@ pipeline {
         success {
             echo 'Pipeline succeeded!'
             emailext(
-                to: 'sundarammoulee@gmail.com',
+                to: 'sundarammoulee@gmail.com, jcurlz55@gmail.com',
                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build succeeded! Check details at ${env.BUILD_URL}",
                 attachLog: true
@@ -64,7 +64,7 @@ pipeline {
         failure {
             echo 'Pipeline failed!'
             emailext(
-                to: 'sundarammoulee@gmail.com',
+                 to: 'sundarammoulee@gmail.com, jcurlz55@gmail.com',
                 subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "Build failed! Check console output: ${env.BUILD_URL}",
                 attachLog: true
